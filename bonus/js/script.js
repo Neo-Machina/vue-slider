@@ -57,6 +57,7 @@ var app = new Vue(
                     this.currentActiveElement = this.slides.length - 1;
                 }
             },
+            // BONUS 1
             setCurrentActiveElement(elementIndex) {
                 this.currentActiveElement = elementIndex;
             }

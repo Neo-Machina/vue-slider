@@ -65,6 +65,13 @@ var app = new Vue(
             // BONUS 2
             startAutoPlay() {
                 this.autoPlayClock = setInterval(this.showNextElement, 3000);
+            },
+            // BONUS 3
+            stopAutoPlay() {
+                clearInterval(this.autoPlayClock);
+            },
+            reStartAutoPlat() {
+                this.startAutoPlay();
             }
         },
         mounted() {

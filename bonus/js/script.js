@@ -8,6 +8,7 @@ var app = new Vue(
         el:'#root',
         data: {
             currentActiveElement: 0,
+            autoPlayClock: null,
             slides: [
                 {
                     image: 'img/01.jpg',
@@ -60,7 +61,14 @@ var app = new Vue(
             // BONUS 1
             setCurrentActiveElement(elementIndex) {
                 this.currentActiveElement = elementIndex;
+            },
+            // BONUS 2
+            startAutoPlay() {
+                this.autoPlayClock = setInterval(this.showNextElement, 3000);
             }
-        }              
+        },
+        mounted() {
+            this.startAutoPlay();
+        }             
     }
 );

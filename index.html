@@ -30,7 +30,7 @@
                     <div @click="showPreviousElement()" class="prev"></div>
                     <div @click="showNextElement()" class="next"></div>
                     <div v-for="(element, index) in slides" class="thumb" :class="{ 'active': index === currentActiveElement }">
-                        <img @click.prevent="setCurrentActiveElement(index)" :src="element.image" alt="element.title"/>
+                        <img :src="element.image" alt="element.title"/>
                     </div>
                 </div>
 
